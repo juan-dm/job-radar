@@ -4,7 +4,7 @@ Early-career tech job radar for the UK, Spain, Germany, France and the Netherlan
 It pulls internship, graduate and junior listings straight from company job-board feeds. An AI agent then reads each listing to work out who can apply: level, role family, graduation year, languages, visa / right to work, deadline.
 
 ## Stack
-- Next.js (App Router) + TypeScript + React
+- Next.js 16 (App Router) + TypeScript + React, styled with Tailwind CSS 4. This Next.js version is newer than most training data: follow @AGENTS.md and check `node_modules/next/dist/docs/` before writing Next.js code.
 - Supabase (Postgres + auth)
 - Vercel (hosting + scheduled jobs)
 - PostHog (analytics)
@@ -37,4 +37,8 @@ If create-next-app refuses because the folder isn't empty, scaffold in a temp fo
 6. Log every significant decision in `docs/decisions.md` (decision, options, why). Log failures and their fixes in `docs/what-broke.md`.
 
 ## Commands
-Fill these in once the project is scaffolded: dev, build, lint, test, run crawler, run evals.
+- `npm run dev`: local dev server at http://localhost:3000, reloads on save.
+- `npm run build`: production build, the same one Vercel runs. Run it before pushing.
+- `npm run lint`: ESLint with Next.js's recommended rules.
+- `npm start`: serve the production build locally (after `npm run build`).
+- Test, run crawler, run evals: not set up yet (crawler is step 3, evals step 5).
